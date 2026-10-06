@@ -76,5 +76,5 @@ with t3:
     st.table(pd.DataFrame({"Precision": ["63.63%","96.06%","85.60%","80.00%","70.00%"], "Recall": ["97.27%","76.49%","61.63%","0.14%","10.45%"],
         "F1-score": ["76.93%","85.16%","71.66%","0.28%","18.18%"]}, index=ORDER))
     x, y = st.columns(2)
-    x.image("figures/cm.png", caption="Confusion matrix (KDDTest+)"); y.image("figures/imp.png", caption="Top 15 feature importances")
+    x.image("cm.png", caption="Confusion matrix (KDDTest+)"); y.image("imp.png", caption="Top 15 feature importances")
     st.info("The model is strong on Normal and DoS traffic but misses most R2L and U2R attacks (rare in training; 17 attack types appear only in the test set).")
